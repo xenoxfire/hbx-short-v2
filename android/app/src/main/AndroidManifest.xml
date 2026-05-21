@@ -59,7 +59,12 @@
             </intent-filter>
         </service>
 
-        <!-- Firebase auto-init -->
+        <!-- Flutter v2 embedding — DO NOT REMOVE (required by flutter build) -->
+          <meta-data
+              android:name="flutterEmbedding"
+              android:value="2" />
+
+          <!-- Firebase auto-init -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="hbx_high_priority" />
