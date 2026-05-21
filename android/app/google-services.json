@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "350636115505",
+    "project_id": "xenox-short-2759c",
+    "storage_bucket": "xenox-short-2759c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350636115505:android:df77baa965921e8ae57710",
+        "android_client_info": {
+          "package_name": "com.hbx.shortapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjRQcKpjtKPjqJWJxYm-zZrfY0O_YsO3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

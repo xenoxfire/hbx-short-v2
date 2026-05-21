@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HBX Short</string>
+    <string name="channel_name">HBX Notifications</string>
+    <string name="channel_desc">HBX Short push notifications</string>
+</resources>

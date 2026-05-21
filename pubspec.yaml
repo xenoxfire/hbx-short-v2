@@ -1,0 +1,28 @@
+name: hbx_short
+description: HBX Short - Float Sheet & WebApp Manager
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.10.0
+  firebase_core: ^3.8.0
+  firebase_messaging: ^15.1.6
+  flutter_local_notifications: ^17.2.4
+  permission_handler: ^11.3.1
+  shared_preferences: ^2.3.4
+  http: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/launcher_icon.png
