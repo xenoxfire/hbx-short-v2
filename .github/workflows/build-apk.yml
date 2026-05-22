@@ -10,9 +10,6 @@ name: Build APK
       name: build
       runs-on: ubuntu-latest
       steps:
-        - name: Set up job
-          run: echo "Starting HBX Short APK build"
-
         - name: Checkout code
           uses: actions/checkout@v4
 
@@ -31,24 +28,20 @@ name: Build APK
         - name: Get Flutter dependencies
           run: flutter pub get
 
-        - name: Build ARM64 APK (release, smallest size)
-          run: flutter build apk --release --target-platform android-arm64 --no-tree-shake-icons
+        - name: Build Split APKs (release)
+          run: flutter build apk --release --split-per-abi --no-tree-shake-icons
 
-        - name: Upload ARM64 APK
+        - name: Upload ARM64 APK (modern phones ~20MB)
           uses: actions/upload-artifact@v4
           with:
-            name: hbx-short-arm64-release
+            name: hbx-short-arm64-apk
             path: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+            if-no-files-found: error
 
-        - name: Build ARM APK (release, older phones)
-          run: flutter build apk --release --target-platform android-arm --no-tree-shake-icons
-
-        - name: Upload ARM APK
+        - name: Upload ARM APK (older phones ~18MB)
           uses: actions/upload-artifact@v4
           with:
-            name: hbx-short-arm-release
+            name: hbx-short-arm-apk
             path: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
-
-        - name: Complete job
-          run: echo "Build complete! Download artifacts above."
+            if-no-files-found: warn
   
